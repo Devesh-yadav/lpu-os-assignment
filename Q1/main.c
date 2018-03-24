@@ -36,7 +36,7 @@ int main() {
             }
             break;
         default:
-            wait(); // Wait until the child process finishes its execution.
+            wait(NULL); // Wait until the child process finishes its execution.
             printf("\n");
     }
 
