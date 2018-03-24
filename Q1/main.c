@@ -30,10 +30,14 @@ int main() {
             printf("\n\nFailed to create the child process.");
             exit(1); // Abort the program.
         case 0:
-            // TODO: Implement logic here.
+            while (n >= 1) {
+                printf("%d ", n);
+                n = n / 2;
+            }
             break;
         default:
-            wait();
+            wait(); // Wait until the child process finishes its execution.
+            printf("\n");
     }
 
     return 0;
