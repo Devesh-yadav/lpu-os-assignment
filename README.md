@@ -1,1 +1,1 @@
-# CSE316-Assignment
+# Assignments
