@@ -5,7 +5,7 @@
 /**
  * Creation of Zombie Process.
  *
- * A zombie process that has completed execution via the exit system call, but still has an entry in the process table.
+ * A zombie process is that process which has completed execution via the exit system call, but still has an entry in the process table.
  * In other words, a zombie process is a child process whose parent has died before the child finishes its execution.
  * So, we create two child processes and makes the parent sleep for 30 seconds (and not wait for the child).
  * Thus the child process becomes a zombie process.
