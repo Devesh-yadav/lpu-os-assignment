@@ -36,7 +36,7 @@ int main() {
         }
     }
 
-    sleep(30); // Let parent sleep for 30 seconds and exit.
+    sleep(30); // Let the parent process sleep for 30 seconds and then exit.
 
     return 0;
 }
