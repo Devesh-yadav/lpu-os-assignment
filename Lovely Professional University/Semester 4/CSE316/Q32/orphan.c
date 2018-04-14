@@ -27,7 +27,7 @@ int main() {
 
     /**
      * The parent process will exit immediately.
-     * The child process wil exit after sleeping for 30 seconds.
+     * The child process will exit after sleeping for 30 seconds.
      */
     exit(EXIT_SUCCESS);
 }
