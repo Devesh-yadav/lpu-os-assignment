@@ -5,28 +5,29 @@
 #include "incall.h"
 
 int main() {
-    pid_t p[2];
+    pid_t p;
     int i;
 
     for (i = 0; i < 2; ++i) {
-        p[i] = fork();
+        p = fork();
 
-        if (p[i] < 0)
+        if (p < 0)
         {
             perror("Fork failed!\n");
             exit(EXIT_FAILURE);
         }
-        else if (p[i] == 0)
+        else if (p == 0)
         {
             // Child process.
 
             printf("Child process having PID %d.\n", getpid());
             sleep(30); // Let the child process sleep for 30 seconds.
-            exit(EXIT_SUCCESS);
         }
     }
 
-    exit(EXIT_SUCCESS); // Let the parent process exit.
-
-    return 0;
+    /**
+     * The parent process will exit immediately.
+     * The child process wil exit after sleeping for 30 seconds.
+     */
+    exit(EXIT_SUCCESS);
 }
