@@ -22,12 +22,12 @@ int main() {
 
             printf("Child process having PID %d.\n", getpid());
             sleep(30); // Let the child process sleep for 30 seconds.
+            exit(EXIT_SUCCESS); // Let the child exit.
         }
     }
 
     /**
      * The parent process will exit immediately.
-     * The child process will exit after sleeping for 30 seconds.
      */
     exit(EXIT_SUCCESS);
 }
